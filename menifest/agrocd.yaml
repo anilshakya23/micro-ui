@@ -3,7 +3,7 @@ kind: Application
 metadata: 
   name: argocd
 spec:
-  project: default
+  project: argocd-ui
   source:
     repoURL: https://github.com/anilshakya23/azure-terraform-app-infra.git
     targetRevision: main
@@ -11,4 +11,4 @@ spec:
     ref: menifest
   destination:
     server: https://kubernetes.default.svc
-    namespace: default
+    namespace: argocd-ui
