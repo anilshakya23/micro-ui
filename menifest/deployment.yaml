@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata: 
+  name: deployment
+spec: 
+  replicas: 4 
+  selector: 
+    matchLabels:
+      app: unless
+  template: 
+    metadata:
+      labels:
+        app: unless
+    spec: 
+      containers:
+      - name: deployment-container
+        image: mycontaineranil.azurecr.io/frontend:v1
+        ports:
+        - containerPort: 80
+  strategy: 
+    type: RollingUpdate

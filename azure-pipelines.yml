@@ -1,0 +1,16 @@
+trigger: none 
+
+pool: self-hosted-pool
+
+stages:
+  - stage: 
+    displayName: build
+    jobs:
+      - job: 
+        displayName: build
+        steps:
+        - task: Docker@2
+          inputs:
+            command: 'buildAndPush'
+            Dockerfile: '**/Dockerfile'
+
