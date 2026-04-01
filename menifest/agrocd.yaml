@@ -1,0 +1,14 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata: 
+  name: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/anilshakya23/azure-terraform-app-infra.git
+    targetRevision: main
+    path: .
+    ref: menifest
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: default
