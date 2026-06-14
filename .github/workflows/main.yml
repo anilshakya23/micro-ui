@@ -1,7 +1,9 @@
 name: Frontend CI
 
 on:
-  workflow_call:
+  push:
+    branches:
+      - main
 jobs:
   build:
     uses: anilshakya23/micro-ui-ci/.github/workflows/node.js.yml@main
