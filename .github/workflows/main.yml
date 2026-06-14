@@ -1,0 +1,8 @@
+name: Frontend CI
+
+on:
+  push:
+
+jobs:
+  build:
+    uses: anilshakya23/micro-ui-ci/.github/workflows/node.js.yml@main
